@@ -260,6 +260,11 @@ namespace Warehouse.Infrastructure.Data.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<string>("CustomerNumber")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
                     b.Property<string>("Identifier")
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
@@ -274,6 +279,9 @@ namespace Warehouse.Infrastructure.Data.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CustomerNumber")
+                        .IsUnique();
 
                     b.ToTable("Contragents");
                 });

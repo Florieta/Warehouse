@@ -11,6 +11,10 @@ namespace Warehouse.Infrastructure.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Contragent>()
+               .HasIndex(c => c.CustomerNumber)
+               .IsUnique();
+
             base.OnModelCreating(modelBuilder);
         }
 
