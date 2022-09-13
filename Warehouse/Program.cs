@@ -14,14 +14,15 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 {
     options.SignIn.RequireConfirmedAccount = true;
 })
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-//builder.Services.AddAuthentication()
-//    .AddFacebook(options =>
-//    {
-//        options.AppId = builder.Configuration.GetValue<string>("Facebook:AppId");
-//        options.AppSecret = builder.Configuration.GetValue<string>("Facebook:AppSecret");
-//    });
+builder.Services.AddAuthentication()
+    .AddFacebook(options =>
+    {
+        options.AppId = builder.Configuration.GetValue<string>("Facebook:AppId");
+        options.AppSecret = builder.Configuration.GetValue<string>("Facebook:AppSecret");
+    });
 
 
 builder.Services.AddControllersWithViews()
@@ -56,6 +57,10 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "Area",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
