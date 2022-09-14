@@ -16,7 +16,7 @@ namespace Warehouse.Controllers
 
         public IActionResult Index()
         {
-            ViewData[MessageConstant.SuccessMessage] = "Bravo!";
+            
             return View();
         }
 
