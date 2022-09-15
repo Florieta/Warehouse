@@ -20,12 +20,7 @@ namespace Warehouse.Controllers
             cache = _cache;
         }
 
-        public IActionResult Index()
-        {
-            
-            return View();
-        }
-
+        
         public async Task<IActionResult> Index()
         {
 
@@ -42,7 +37,7 @@ namespace Warehouse.Controllers
                 };
 
                 await cache.SetStringAsync("cachedTime", cachedData, cacheOptions);
-                await cache.SetAsync()
+                
             }
 
             return View(nameof(Index), cachedData);
