@@ -3,6 +3,7 @@ using Microsoft.Extensions.Caching.Distributed;
 using System.Diagnostics;
 using Warehouse.Core.Constants;
 using Warehouse.Core.Contracts;
+using Warehouse.Infrastructure.Data;
 using Warehouse.Models;
 
 namespace Warehouse.Controllers
