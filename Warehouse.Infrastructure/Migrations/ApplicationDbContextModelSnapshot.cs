@@ -202,6 +202,68 @@ namespace Warehouse.Infrastructure.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("77963acf-7b33-435f-9bed-5f926ece5bc3"),
+                            DateFrom = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Label = "Food"
+                        },
+                        new
+                        {
+                            Id = new Guid("0f1fa492-6a74-4b89-bde7-0f8d73d66277"),
+                            DateFrom = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Label = "Computers"
+                        },
+                        new
+                        {
+                            Id = new Guid("afdca761-93c6-4472-b970-840bfdeb52e5"),
+                            DateFrom = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Label = "Books"
+                        },
+                        new
+                        {
+                            Id = new Guid("37222c64-dd03-4660-a9c7-7e16da8c7dfe"),
+                            DateFrom = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Label = "Toys"
+                        },
+                        new
+                        {
+                            Id = new Guid("a91908ba-0fd7-4426-ba29-96d07aafc329"),
+                            DateFrom = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Label = "Sporting clothes"
+                        },
+                        new
+                        {
+                            Id = new Guid("270ac1e4-1071-4538-9385-1f5ba82909cd"),
+                            DateFrom = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Label = "Bikes"
+                        },
+                        new
+                        {
+                            Id = new Guid("2ef69c5c-bf63-4641-aba4-06bc8d89f1dd"),
+                            DateFrom = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Label = "Mobile phones"
+                        },
+                        new
+                        {
+                            Id = new Guid("cf1c9eb4-5d97-45ef-9c35-570ffc6eca61"),
+                            DateFrom = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Label = "Tablets"
+                        },
+                        new
+                        {
+                            Id = new Guid("14153ce2-3e50-48a1-8c95-fd6910843ab0"),
+                            DateFrom = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Label = "Sunglasses"
+                        },
+                        new
+                        {
+                            Id = new Guid("647b7946-2555-450d-876d-872aa2aadfe2"),
+                            DateFrom = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Label = "Monitors"
+                        });
                 });
 
             modelBuilder.Entity("Warehouse.Infrastructure.Data.Contragent", b =>
